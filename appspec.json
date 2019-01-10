@@ -1,0 +1,31 @@
+{
+	"version": 0.2,
+	"Resources": [
+		{
+			"TargetService": {
+				"Type": "AWS::ECS::Service",
+				"Properties": {
+    			"TaskDefinition": "hello-world",
+    			"LoadBalancerInfo": {
+    				"ContainerName": "hello-world-container",
+    				"ContainerPort":3000
+    			},
+    			"PlatformVersion": "",
+    			"NetworkConfiguration": {
+    				"AwsvpcConfiguration": {
+    					"Subnets": [
+    						"",
+    						""
+    					],
+    					"SecurityGroups": [
+    						"",
+    						""
+    					],
+    					"AssignPublicIp": ""
+    				}
+    			}
+  			}				
+			}
+		}
+	]
+}
